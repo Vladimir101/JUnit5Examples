@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static java.time.Duration.*;
+
 class AssertionsJUnit5
 {
 	@DisplayName("standard assertions")
