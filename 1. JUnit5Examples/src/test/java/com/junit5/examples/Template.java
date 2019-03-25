@@ -6,7 +6,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 
+@DisplayName("Generic Template")
 class Template
 {
 	@BeforeAll
@@ -21,6 +23,7 @@ class Template
 		System.out.println("@BeforeEach - setUp");
 	}
 	
+	@DisplayName("My first test")
 	@Test
 	void test1()
 	{
