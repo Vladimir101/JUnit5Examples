@@ -33,7 +33,7 @@ class Template
 		System.out.println("test2");
 	}
 	
-	@Disabled
+	@Disabled("not ready yet")
 	@Test
 	public void test3()
 	{
