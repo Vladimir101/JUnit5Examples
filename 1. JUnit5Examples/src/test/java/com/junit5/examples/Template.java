@@ -22,20 +22,20 @@ class Template
 	}
 	
 	@Test
-	public void test1()
+	void test1()
 	{
 		System.out.println("test1");
 	}
 
 	@Test
-	public void test2()
+	void test2()
 	{
 		System.out.println("test2");
 	}
 	
 	@Disabled("not ready yet")
 	@Test
-	public void test3()
+	void test3()
 	{
 		System.out.println("test3");
 	}
