@@ -36,7 +36,7 @@ class AssumptionsTest
 		assumingThat(someString.equals("Just a string"), // condition
 				() -> {
 						// Execute this if assumption is true...
-						System.out.println("assumeThatTest: Print if assumingThat is true");
+						System.out.println("assumingThatTest: Print if assumingThat is true");
 					  });
 	}
 }
