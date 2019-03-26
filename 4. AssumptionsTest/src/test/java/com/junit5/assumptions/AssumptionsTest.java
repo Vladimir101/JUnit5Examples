@@ -1,6 +1,5 @@
 package com.junit5.assumptions;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.assumeFalse;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
@@ -31,12 +30,12 @@ class AssumptionsTest
 	}
 
 	@Test
-	void assumeThatTest()
+	void assumingThatTest()
 	{
 		String someString = "Just a string";
 		assumingThat(someString.equals("Just a string"), // condition
 				() -> {
-			// Execute this if assumption holds...
+						// Execute this if assumption is true...
 						System.out.println("assumeThatTest: Print if assumingThat is true");
 					  });
 	}
