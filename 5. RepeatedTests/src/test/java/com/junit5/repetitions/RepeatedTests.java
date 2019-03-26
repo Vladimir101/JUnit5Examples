@@ -7,7 +7,7 @@ import org.junit.jupiter.api.TestInfo;
 class RepeatedTests
 {
 	@DisplayName("test with the default displayName")
-	@RepeatedTest(value = 2, name = "{displayName}")//: repetition {currentRepetition} of {totalRepetitions}")
+	@RepeatedTest(value = 2, name = "{displayName}") 
 	void repeatedTest(TestInfo testInfo)
 	{
 		System.out.println("repeatedTest name: " + testInfo.getDisplayName());
