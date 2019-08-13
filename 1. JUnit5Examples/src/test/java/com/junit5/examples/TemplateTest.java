@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("Generic Template")
-class Template
+class TemplateTest
 {
 	@BeforeAll
 	static void setUpBeforeClass()
