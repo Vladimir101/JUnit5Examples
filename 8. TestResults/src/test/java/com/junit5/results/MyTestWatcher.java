@@ -19,6 +19,7 @@ public class MyTestWatcher implements TestWatcher
 
 	public void testFailed(ExtensionContext extensionContext, Throwable throwable)
 	{
+		// in case of WebDriver, you need to add a screenshot code here
 		System.out.println("'" + extensionContext.getDisplayName() + "' failed");
 	}
 
