@@ -5,7 +5,7 @@ import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 
 @Execution(ExecutionMode.CONCURRENT)
-class Test1
+class ParallelTests
 {
 	@Test
 	void test1() throws InterruptedException
