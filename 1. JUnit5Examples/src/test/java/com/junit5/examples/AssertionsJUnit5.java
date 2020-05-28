@@ -2,6 +2,8 @@ package com.junit5.examples;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.time.Duration;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static java.time.Duration.*;
@@ -20,7 +22,16 @@ class AssertionsJUnit5
 	@Test
 	void timeoutTest()
 	{
-		 assertTimeout(ofMillis(10), 
-				 () -> {Thread.sleep(100);});
+		 assertTimeout(Duration.ofMillis(10), 
+				 () -> {Thread.sleep(9);});
+	}
+	
+	@Test
+	void exceptionTest()
+	{
+// If the expected exception is thrown, assertThrows returns the exception		
+		var exception = assertThrows(ArithmeticException.class,
+				() -> {int a = 1/0;});
+		assertEquals("/ by zero", exception.getMessage());
 	}
 }
