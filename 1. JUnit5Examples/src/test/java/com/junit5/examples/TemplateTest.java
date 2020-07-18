@@ -5,6 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 
@@ -31,9 +32,9 @@ class TemplateTest
 	}
 
 	@Test
-	void test2()
+	void myBeautifulTest(TestInfo testInfo)
 	{
-		System.out.println("test2");
+		System.out.println(testInfo.getTestMethod().get().getName());
 	}
 	
 	@Disabled("not ready yet")
