@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 // examples by Philip Riecks
+// You can use this feature to group tests that verify common functionality. 
+// This does not only improves maintainability but also reduces the time 
+// to understand what the class under test is responsible for
 public class NestedTest
 {
 	@Nested
