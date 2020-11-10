@@ -10,8 +10,16 @@ import org.junit.jupiter.api.Test;
 
 class UsingAssertJ
 {
+	private String name = "Vladimir";
 	private List<String> list = Arrays.asList("1", "2", "3");
 	private Map<String, Integer> map = Map.of("One", 1, "Two", 2, "Three", 3);
+	
+	@Test
+	void stringTest()
+	{
+		assertThat(name).isEqualTo("Vladimir");
+		assertThat(name).as("testing name").isNotEqualTo("Vlad");		
+	}
 	
 	@Test
 	void listTest()
