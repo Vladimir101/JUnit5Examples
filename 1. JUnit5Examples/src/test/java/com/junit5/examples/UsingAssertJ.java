@@ -1,11 +1,18 @@
 package com.junit5.examples;
 
+/*To simplify the usage of the AssertJ assertThat statement in the Eclipse IDE 
+ * go to Window -> Preferences -> Java  Editor -> Content assist  
+ * -> Favorites -> New Type, 
+ * enter org.assertj.core.api.Assertions and confirm.
+ * You should see org.assertj.core.api.Assertions.* in the list.*/
+
 import static org.assertj.core.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
 
 class UsingAssertJ
@@ -39,5 +46,17 @@ class UsingAssertJ
 		  .containsKey("One")
 		  .doesNotContainKeys("Ten")
 		  .contains(entry("Three", 3));
+	}
+	
+	@Test
+	public void chained_soft_assertions_example()
+	{
+		SoftAssertions softly = new SoftAssertions();
+		String name = "Vladimir B";
+		softly.assertThat(name)
+			.startsWith("Vlad")
+			.contains("B");
+		
+		softly.assertAll();
 	}
 }
