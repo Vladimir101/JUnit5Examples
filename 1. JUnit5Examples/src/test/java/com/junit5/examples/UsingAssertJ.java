@@ -14,6 +14,7 @@ import java.util.Map;
 
 import org.assertj.core.api.SoftAssertions;
 import static org.assertj.core.api.SoftAssertions.assertSoftly;
+
 import org.junit.jupiter.api.Test;
 
 class UsingAssertJ
