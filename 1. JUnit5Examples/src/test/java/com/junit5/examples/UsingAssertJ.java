@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.assertj.core.api.SoftAssertions;
+import static org.assertj.core.api.SoftAssertions.assertSoftly;
 import org.junit.jupiter.api.Test;
 
 class UsingAssertJ
@@ -49,7 +50,7 @@ class UsingAssertJ
 	}
 	
 	@Test
-	public void chained_soft_assertions_example()
+	public void softTest()
 	{
 		SoftAssertions softly = new SoftAssertions();
 		String name = "Vladimir B";
@@ -58,5 +59,17 @@ class UsingAssertJ
 			.contains("B");
 		
 		softly.assertAll();
+	}
+	
+	@Test
+	void softTest2()
+	{	
+		assertSoftly(softly -> 		// add static import
+		{
+			  softly.assertThat(name)
+					.startsWith("Tony")
+					.contains("B");
+// no need to call assertAll(), assertSoftly does it for us.			
+		});
 	}
 }
