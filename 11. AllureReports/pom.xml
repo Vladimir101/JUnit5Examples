@@ -16,7 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>14</maven.compiler.source>
     <maven.compiler.target>14</maven.compiler.target>
-    <allure.version>2.13.0</allure.version>
+    <allure.version>2.13.7</allure.version>
 		<allure.cmd.download.url>
 		   https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
 		</allure.cmd.download.url>
@@ -47,7 +47,7 @@
 	<dependency>
 	    <groupId>io.qameta.allure</groupId>
 	    <artifactId>allure-junit5</artifactId>
-	    <version>2.13.0</version>
+	    <version>2.13.7</version>
 	    <scope>test</scope>
 	</dependency>
   </dependencies>
@@ -71,7 +71,15 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
+          <version>3.0.0-M1</version>
+          <configuration>
+          <systemProperties>
+          	<property>
+          		<name>allure.results.directory</name>
+          		<value>C:\Users\vladi\.jenkins\workspace\AllureJUnit5\allure-results</value>
+          	</property>
+          </systemProperties>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
